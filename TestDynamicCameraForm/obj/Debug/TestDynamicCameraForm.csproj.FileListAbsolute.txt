@@ -1,0 +1,10 @@
+D:\CollectCamera\CollectCamera\TestDynamicCameraForm\bin\Debug\TestDynamicCameraForm.exe.config
+D:\CollectCamera\CollectCamera\TestDynamicCameraForm\bin\Debug\TestDynamicCameraForm.exe
+D:\CollectCamera\CollectCamera\TestDynamicCameraForm\bin\Debug\TestDynamicCameraForm.pdb
+D:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Debug\TestDynamicCameraForm.Form1.resources
+D:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Debug\TestDynamicCameraForm.Properties.Resources.resources
+D:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Debug\TestDynamicCameraForm.csproj.GenerateResource.Cache
+D:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Debug\TestDynamicCameraForm.exe
+D:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Debug\TestDynamicCameraForm.pdb
+D:\CollectCamera\CollectCamera\TestDynamicCameraForm\bin\Debug\AqDevice.dll
+D:\CollectCamera\CollectCamera\TestDynamicCameraForm\bin\Debug\AqDevice.pdb

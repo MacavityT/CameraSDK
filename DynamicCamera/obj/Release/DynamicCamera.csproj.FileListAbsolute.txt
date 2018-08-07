@@ -1,0 +1,10 @@
+D:\CollectCamera\CollectCamera\DynamicCamera\bin\Release\DynamicCamera.dll
+D:\CollectCamera\CollectCamera\DynamicCamera\bin\Release\DynamicCamera.pdb
+D:\CollectCamera\CollectCamera\DynamicCamera\bin\Release\AqDevice.dll
+D:\CollectCamera\CollectCamera\DynamicCamera\bin\Release\AqDevice.pdb
+D:\CollectCamera\CollectCamera\bin\Release\DynamicCamera.dll
+D:\CollectCamera\CollectCamera\bin\Release\DynamicCamera.pdb
+D:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\Camera_Dynamic.Properties.Resources.resources
+D:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.csproj.GenerateResource.Cache
+D:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.dll
+D:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.pdb
