@@ -8,3 +8,11 @@ D:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\Camera_Dynamic.Properti
 D:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.csproj.GenerateResource.Cache
 D:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.dll
 D:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.pdb
+D:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.csprojResolveAssemblyReference.cache
+E:\CollectCamera\CollectCamera\bin\Release\DynamicCamera.dll
+E:\CollectCamera\CollectCamera\bin\Release\DynamicCamera.pdb
+E:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\Camera_Dynamic.Properties.Resources.resources
+E:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.csproj.GenerateResource.Cache
+E:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.dll
+E:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.pdb
+E:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.csprojResolveAssemblyReference.cache

@@ -1,0 +1,13 @@
+E:\CollectCamera\CollectCamera\TestDaHengCamera\bin\Release\TestDaHengCamera.exe.config
+E:\CollectCamera\CollectCamera\TestDaHengCamera\bin\Release\TestDaHengCamera.exe
+E:\CollectCamera\CollectCamera\TestDaHengCamera\bin\Release\TestDaHengCamera.pdb
+E:\CollectCamera\CollectCamera\TestDaHengCamera\bin\Release\AqDevice.dll
+E:\CollectCamera\CollectCamera\TestDaHengCamera\bin\Release\AqDevice.pdb
+E:\CollectCamera\CollectCamera\bin\Release\TestDaHengCamera.exe.config
+E:\CollectCamera\CollectCamera\bin\Release\TestDaHengCamera.exe
+E:\CollectCamera\CollectCamera\bin\Release\TestDaHengCamera.pdb
+E:\CollectCamera\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.Form1.resources
+E:\CollectCamera\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.Properties.Resources.resources
+E:\CollectCamera\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.csproj.GenerateResource.Cache
+E:\CollectCamera\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.exe
+E:\CollectCamera\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.pdb

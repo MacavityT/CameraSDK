@@ -11,3 +11,12 @@ D:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCame
 D:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.csproj.GenerateResource.Cache
 D:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.exe
 D:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.pdb
+D:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.csprojResolveAssemblyReference.cache
+E:\CollectCamera\CollectCamera\bin\Release\TestDynamicCameraForm.exe.config
+E:\CollectCamera\CollectCamera\bin\Release\TestDynamicCameraForm.exe
+E:\CollectCamera\CollectCamera\bin\Release\TestDynamicCameraForm.pdb
+E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.Form1.resources
+E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.Properties.Resources.resources
+E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.csproj.GenerateResource.Cache
+E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.exe
+E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.pdb

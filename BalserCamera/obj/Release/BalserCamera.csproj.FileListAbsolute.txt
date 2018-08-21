@@ -1,0 +1,13 @@
+D:\CollectCamera\CollectCamera\BalserCamera\obj\Release\Interop.BaslerGenICamSource.dll
+D:\CollectCamera\CollectCamera\BalserCamera\obj\Release\BalserCamera.csproj.ResolveComReference.cache
+D:\CollectCamera\CollectCamera\bin\Release\BalserCamera.dll
+D:\CollectCamera\CollectCamera\bin\Release\BalserCamera.pdb
+D:\CollectCamera\CollectCamera\BalserCamera\obj\Release\BalserCamera.dll
+D:\CollectCamera\CollectCamera\BalserCamera\obj\Release\BalserCamera.pdb
+E:\CollectCamera\CollectCamera\bin\Release\BalserCamera.dll
+E:\CollectCamera\CollectCamera\bin\Release\BalserCamera.pdb
+E:\CollectCamera\CollectCamera\BalserCamera\obj\Release\BalserCamera.csprojResolveAssemblyReference.cache
+E:\CollectCamera\CollectCamera\BalserCamera\obj\Release\Interop.BaslerGenICamSource.dll
+E:\CollectCamera\CollectCamera\BalserCamera\obj\Release\BalserCamera.csproj.ResolveComReference.cache
+E:\CollectCamera\CollectCamera\BalserCamera\obj\Release\BalserCamera.dll
+E:\CollectCamera\CollectCamera\BalserCamera\obj\Release\BalserCamera.pdb
