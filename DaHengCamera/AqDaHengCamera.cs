@@ -173,10 +173,7 @@ namespace DaHengCamera
                     m_objIGXDevice = ObjIGXFactory.OpenDeviceByUserID(this.Name, GX_ACCESS_MODE.GX_ACCESS_EXCLUSIVE);
                     m_objIGXFeatureControl = m_objIGXDevice.GetRemoteFeatureControl();
                 }
-                else
-                {
-                    return 0;
-                }
+               
             }
                            
             TriggerConfiguration();
