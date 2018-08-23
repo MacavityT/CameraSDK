@@ -1,0 +1,15 @@
+D:\CollectCamera\CollectCamera\TestBaslerCamera\bin\Debug\TestBaslerCamera.exe.config
+D:\CollectCamera\CollectCamera\TestBaslerCamera\bin\Debug\TestBaslerCamera.exe
+D:\CollectCamera\CollectCamera\TestBaslerCamera\bin\Debug\TestBaslerCamera.pdb
+D:\CollectCamera\CollectCamera\TestBaslerCamera\bin\Debug\AqDevice.dll
+D:\CollectCamera\CollectCamera\TestBaslerCamera\bin\Debug\BalserCamera.dll
+D:\CollectCamera\CollectCamera\TestBaslerCamera\bin\Debug\Basler.Pylon.dll
+D:\CollectCamera\CollectCamera\TestBaslerCamera\bin\Debug\AqDevice.pdb
+D:\CollectCamera\CollectCamera\TestBaslerCamera\bin\Debug\BalserCamera.pdb
+D:\CollectCamera\CollectCamera\TestBaslerCamera\bin\Debug\Basler.Pylon.xml
+D:\CollectCamera\CollectCamera\TestBaslerCamera\obj\Debug\TestBaslerCamera.csprojResolveAssemblyReference.cache
+D:\CollectCamera\CollectCamera\TestBaslerCamera\obj\Debug\TestBaslerCamera.Form1.resources
+D:\CollectCamera\CollectCamera\TestBaslerCamera\obj\Debug\TestBaslerCamera.Properties.Resources.resources
+D:\CollectCamera\CollectCamera\TestBaslerCamera\obj\Debug\TestBaslerCamera.csproj.GenerateResource.Cache
+D:\CollectCamera\CollectCamera\TestBaslerCamera\obj\Debug\TestBaslerCamera.exe
+D:\CollectCamera\CollectCamera\TestBaslerCamera\obj\Debug\TestBaslerCamera.pdb

@@ -20,3 +20,4 @@ E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCame
 E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.csproj.GenerateResource.Cache
 E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.exe
 E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.pdb
+E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.csprojResolveAssemblyReference.cache

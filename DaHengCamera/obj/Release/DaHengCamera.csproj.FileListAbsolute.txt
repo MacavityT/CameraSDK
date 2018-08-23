@@ -13,3 +13,4 @@ E:\CollectCamera\CollectCamera\bin\Release\DaHengCamera.dll
 E:\CollectCamera\CollectCamera\bin\Release\DaHengCamera.pdb
 E:\CollectCamera\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.dll
 E:\CollectCamera\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.pdb
+E:\CollectCamera\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.csprojResolveAssemblyReference.cache

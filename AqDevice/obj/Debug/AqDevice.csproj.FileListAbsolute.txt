@@ -1,0 +1,7 @@
+E:\AQRose\Test\CameraManager\AqDevice\bin\Debug\AqDevice.dll
+E:\AQRose\Test\CameraManager\AqDevice\bin\Debug\AqDevice.pdb
+E:\AQRose\Test\CameraManager\AqDevice\obj\Debug\AqDevice.dll
+E:\AQRose\Test\CameraManager\AqDevice\obj\Debug\AqDevice.pdb
+E:\AQRose\Test\CameraManager\Bin\AqDevice.dll
+E:\AQRose\Test\CameraManager\Bin\AqDevice.pdb
+E:\AQRose\Test\CameraManager\AqDevice\obj\Debug\AqDevice.csprojResolveAssemblyReference.cache

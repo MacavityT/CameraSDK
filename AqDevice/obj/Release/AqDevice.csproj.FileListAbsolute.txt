@@ -1,0 +1,6 @@
+E:\CollectCamera\CollectCamera\Bin\AqDevice.dll
+E:\CollectCamera\CollectCamera\Bin\AqDevice.pdb
+E:\CollectCamera\CollectCamera\AqDevice\obj\Release\AqDevice.dll
+E:\CollectCamera\CollectCamera\AqDevice\obj\Release\AqDevice.pdb
+E:\CollectCamera\CollectCamera\bin\Release\AqDevice.dll
+E:\CollectCamera\CollectCamera\bin\Release\AqDevice.pdb

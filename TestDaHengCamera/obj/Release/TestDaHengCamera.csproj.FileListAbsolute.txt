@@ -11,3 +11,4 @@ E:\CollectCamera\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.Pro
 E:\CollectCamera\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.csproj.GenerateResource.Cache
 E:\CollectCamera\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.exe
 E:\CollectCamera\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.pdb
+E:\CollectCamera\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.csprojResolveAssemblyReference.cache

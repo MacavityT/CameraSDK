@@ -7,6 +7,9 @@ using System.Threading;
 using System.Drawing;
 using System.Diagnostics;
 using System.Drawing.Imaging;
+using System.Threading;
+using System.Runtime.InteropServices;
+using System.Windows;
 using AqDevice;
 using Basler.Pylon;
 
@@ -25,7 +28,13 @@ namespace BalserCamera
         private double gain;
         private bool gainauto;
 
-        
+        //set image ROI
+        private Int64 imagewidth ;
+        private Int64 imageheight;
+        private Int64 imageoffsetX;
+        private Int64 imageoffsetY;
+
+       
         private AqDevice.TriggerSources triggersource;
         private AqDevice.TriggerSwitchs triggerswitchs;
         private AqDevice.TriggerModes triggermodes;
@@ -38,6 +47,7 @@ namespace BalserCamera
         public Camera getonecamera;
         private Stopwatch stopWatch = new Stopwatch();
         private PixelDataConverter converter = new PixelDataConverter();
+     //   private Bitmap bitmap;
 
         public static List<IAqCamera> AllBalserCamera
         {
@@ -100,6 +110,32 @@ namespace BalserCamera
             set { gainauto = value; }
         }
 
+        //set param ROI
+        public Int64 ImageWidth
+        {
+            get { return imagewidth; }
+            set { imagewidth = value; }
+        }
+
+        public Int64 ImageHeight
+        {
+            get { return imageheight; }
+            set { imageheight = value; }
+        }
+
+        public Int64 ImageoffsetX
+        {
+            get { return imageoffsetX; }
+            set { imageoffsetX = value; }
+        }
+
+        public Int64 ImageoffsetY
+        {
+            get { return imageoffsetY; }
+            set { imageoffsetY = value; }
+        }
+        //set param ROI
+
         public AqDevice.TriggerSources TriggerSource
         {
             get { return triggersource; }
@@ -123,7 +159,7 @@ namespace BalserCamera
             get { return triggerswitchs; }
             set { triggerswitchs = value; }
         }
-
+     
         public int OpenCamera()
         {
             List<ICameraInfo> allCameras = CameraFinder.Enumerate();
@@ -134,7 +170,11 @@ namespace BalserCamera
                     getonecamera = new Camera(tempinfo);
                     if (getonecamera.IsOpen)
                         return 0;
+
+                    TriggerConfiguration();
                     getonecamera.Open();
+                    SetExposureTime();
+                    SetImageROI();
                 }
             }
             return 1;
@@ -142,9 +182,11 @@ namespace BalserCamera
 
         public int CloseCamera()
         {
-            if (getonecamera.IsConnected)
+            if (getonecamera !=null)
             {
                 getonecamera.Close();
+                getonecamera.Dispose();
+                getonecamera = null;
                 return 1;
             }        
             return 0;
@@ -154,7 +196,27 @@ namespace BalserCamera
         {
             if (getonecamera.IsOpen)
             {
-                getonecamera.StreamGrabber.Start();
+                if (triggermodes == TriggerModes.Continuous)
+                {
+                    getonecamera.StreamGrabber.ImageGrabbed += OnImageGrabbed;
+                    getonecamera.StreamGrabber.Start(GrabStrategy.OneByOne, GrabLoop.ProvidedByStreamGrabber);
+                    return 1;
+                }
+                else
+                {
+                    getonecamera.StreamGrabber.ImageGrabbed += OnImageGrabbed;
+                    getonecamera.Parameters[PLCamera.TriggerSelector].SetValue(PLCamera.TriggerSelector.FrameStart);
+                    getonecamera.Parameters[PLCamera.TriggerMode].SetValue(PLCamera.TriggerMode.On);
+                    getonecamera.Parameters[PLCamera.TriggerSource].SetValue(PLCamera.TriggerSource.Software);
+                    getonecamera.Parameters[PLCamera.TriggerActivation].SetValue(PLCamera.TriggerActivation.RisingEdge);
+                    getonecamera.Parameters[PLCamera.TriggerDelayAbs].SetValue(0);
+                    getonecamera.Parameters[PLCamera.ExposureMode].SetValue(PLCamera.ExposureMode.Timed);
+                    getonecamera.Parameters[PLCamera.ExposureAuto].SetValue(PLCamera.ExposureAuto.Off);
+                    getonecamera.Parameters[PLCamera.AcquisitionStatusSelector].SetValue(PLCamera.AcquisitionStatusSelector.FrameTriggerWait);
+                    getonecamera.Parameters[PLCamera.AcquisitionFrameCount].SetValue(2);
+                    getonecamera.StreamGrabber.Start(GrabStrategy.OneByOne, GrabLoop.ProvidedByStreamGrabber);
+
+                }
                 return 1;
             }
 
@@ -183,7 +245,18 @@ namespace BalserCamera
 
         public void TriggerSoftware()
         {
-           TriggerMode = AqDevice.TriggerModes.Unknow;
+
+            bool isWaitingFrameStart = getonecamera.Parameters[PLCamera.AcquisitionStatus].GetValue();
+            if (isWaitingFrameStart)
+            {
+                getonecamera.Parameters[PLCamera.TriggerSoftware].Execute();
+            }
+            else 
+            {
+                bool xxx = false;
+            }
+               
+         //   GetSoftWareFrame();
         }
 
         private void TriggerConfiguration()
@@ -191,73 +264,147 @@ namespace BalserCamera
             if (triggermodes == TriggerModes.Continuous)
             {
                 getonecamera.CameraOpened += Configuration.AcquireContinuous;
-                getonecamera.StreamGrabber.ImageGrabbed += OnImageGrabbed;
-            }      
-            else if(triggermodes == TriggerModes.Unknow)
+            }
+            else if (triggermodes == TriggerModes.Unknow)
             {
-                getonecamera.CameraOpened += Configuration.SoftwareTrigger;
-                getonecamera.StreamGrabber.ImageGrabbed += OnImageGrabbed;
+
             }
         }
 
         public void TriggerHardWare()
         {
-            GetSoftWareFrame();
+            
+        }
+
+        public void SetImageROI()
+        {
+            Int64 maxWidth = getonecamera.Parameters[PLCamera.Width].GetMaximum();
+            Int64 minWidth = getonecamera.Parameters[PLCamera.Width].GetMinimum();
+            if (maxWidth >= ImageWidth && ImageWidth >= minWidth)
+            {
+                getonecamera.Parameters[PLCamera.Width].SetValue(ImageWidth);
+            }
+
+            Int64 maxHeight = getonecamera.Parameters[PLCamera.Height].GetMaximum();
+            Int64 minHeight = getonecamera.Parameters[PLCamera.Height].GetMinimum();
+            if (maxHeight >= ImageHeight && ImageHeight >= minHeight)
+            {
+                getonecamera.Parameters[PLCamera.Height].SetValue(ImageHeight);
+            }
+
+            Int64 maxoffsetX = getonecamera.Parameters[PLCamera.OffsetX].GetMaximum();
+            Int64 minoffsetX = getonecamera.Parameters[PLCamera.OffsetX].GetMinimum();
+            if (maxoffsetX >= ImageoffsetX && ImageoffsetX >= minoffsetX)
+            {
+                getonecamera.Parameters[PLCamera.OffsetX].SetValue(ImageoffsetX);
+            }
+
+            Int64 maxoffsetY = getonecamera.Parameters[PLCamera.OffsetY].GetMaximum();
+            Int64 minoffsetY = getonecamera.Parameters[PLCamera.OffsetY].GetMinimum();
+            if (maxoffsetY >= ImageoffsetY && ImageoffsetY >= minoffsetY)
+            {
+                getonecamera.Parameters[PLCamera.OffsetY].SetValue(ImageoffsetY);
+            }      
         }
 
         public void SetExposureTime()
         {
+            if (getonecamera.Parameters.Contains(PLCamera.ExposureTimeAbs))
+            {
+               double exposuremintime =  getonecamera.Parameters[PLCamera.ExposureTimeAbs].GetMinimum();
+               double exposuremaxtime =  getonecamera.Parameters[PLCamera.ExposureTimeAbs].GetMaximum();
+               if ((exposuretime > exposuremintime) && (exposuretime < exposuremaxtime))
+               {
+                   try
+                   {
+                       getonecamera.Parameters[PLCamera.ExposureTimeAbs].SetValue(exposuretime);
+                   }
+                   catch (Exception)
+                   {
  
+                   }
+               }
+                  
+            }
+            else
+            {
+                double exposuremintime = getonecamera.Parameters[PLCamera.ExposureTime].GetMinimum();
+                double exposuremaxtime = getonecamera.Parameters[PLCamera.ExposureTime].GetMaximum();
+                if ((exposuretime > exposuremintime) && (exposuretime < exposuremaxtime))
+                    getonecamera.Parameters[PLCamera.ExposureTime].SetValue(exposuretime);
+            }
         }
 
         public void GetSoftWareFrame()
         {
-            getonecamera.StreamGrabber.Start(1);
-            while (getonecamera.StreamGrabber.IsGrabbing)
+            using (new TimeTicker("AAA 显示消耗的时间"))
             {
-                if (getonecamera.WaitForFrameTriggerReady(1000, TimeoutHandling.ThrowException))
+                getonecamera.StreamGrabber.Start(1);
+                while (getonecamera.StreamGrabber.IsGrabbing)
                 {
-                    getonecamera.ExecuteSoftwareTrigger();
-                }
-                // Wait for an image and then retrieve it. A timeout of 5000 ms is used. 
-                IGrabResult grabResult = getonecamera.StreamGrabber.RetrieveResult(5000, TimeoutHandling.ThrowException);
-                using (grabResult)
-                {
-                    // Image grabbed successfully? 
-                    if (grabResult.GrabSucceeded)
+                   using (new TimeTicker("AAA 等待时间"))
                     {
-                        Bitmap bitmap = new Bitmap(grabResult.Width, grabResult.Height, PixelFormat.Format32bppRgb);
-                        // Lock the bits of the bitmap.
-                        BitmapData bmpData = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height), ImageLockMode.ReadWrite, bitmap.PixelFormat);
-                        // Place the pointer to the buffer of the bitmap.
-                        converter.OutputPixelFormat = PixelType.BGRA8packed;
-                        IntPtr ptrBmp = bmpData.Scan0;
-                        converter.Convert(ptrBmp, bmpData.Stride * bitmap.Height, grabResult); //Exception handling TODO
-                        bitmap.UnlockBits(bmpData);
-                        Bitmap temp = bitmap;
-                        CallFunction(null, temp); 
+
+                        if (getonecamera.WaitForFrameTriggerReady(5, TimeoutHandling.ThrowException))
+                        {
+                            getonecamera.ExecuteSoftwareTrigger();
+                        }
                     }
-                    else
+
+                    using (new TimeTicker("AAA 时间"))
                     {
-                        Console.WriteLine("Error: {0} {1}", grabResult.ErrorCode, grabResult.ErrorDescription);
+                        // Wait for an image and then retrieve it. A timeout of 5000 ms is used. 
+                        IGrabResult grabResult = null;
+                        using (new TimeTicker("AAA RetrieveResult"))
+                        {
+                           // grabResult = getonecamera.StreamGrabber.GrabOne(1000);
+                            grabResult = getonecamera.StreamGrabber.RetrieveResult(5000, TimeoutHandling.ThrowException);
+                        }
+
+                        using (grabResult)
+                        {
+                            // Image grabbed successfully? 
+                            if (grabResult.GrabSucceeded)
+                            {
+                                Bitmap bitmap = new Bitmap(grabResult.Width, grabResult.Height, PixelFormat.Format32bppRgb);
+                                // Lock the bits of the bitmap.
+                                BitmapData bmpData = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height), ImageLockMode.ReadWrite, bitmap.PixelFormat);
+                                // Place the pointer to the buffer of the bitmap.
+                                converter.OutputPixelFormat = PixelType.BGRA8packed;
+                                IntPtr ptrBmp = bmpData.Scan0;
+                                converter.Convert(ptrBmp, bmpData.Stride * bitmap.Height, grabResult); //Exception handling TODO
+                                bitmap.UnlockBits(bmpData);
+                                Bitmap temp = (Bitmap)bitmap.Clone();
+                                CallFunction(null, temp);
+                                if (bitmap != null)
+                                    bitmap.Dispose();
+
+                                GC.Collect();
+                            }
+                            else
+                            {
+                                Console.WriteLine("Error: {0} {1}", grabResult.ErrorCode, grabResult.ErrorDescription);
+                            }
+                        }
+ 
                     }
+
                 }
             }
-
         }
-
+   
         public void OnImageGrabbed(object sender,ImageGrabbedEventArgs e)
         {
-                          // Get the grab result.
-                IGrabResult grabResult = e.GrabResult;
-
-                // Check if the image can be displayed.
-                if (grabResult.IsValid)
+            using (new TimeTicker("AAAA 显示消耗的时间"))
+            {
+ 
+                try 
                 {
-                    // Reduce the number of displayed images to a reasonable amount if the camera is acquiring images very fast.
-                    if (!stopWatch.IsRunning || stopWatch.ElapsedMilliseconds > 33)
+                    // Get the grab result.
+                    IGrabResult grabResult = e.GrabResult;
+                    // Check if the image can be displayed.
+                    if (grabResult.IsValid)
                     {
-                        stopWatch.Restart();
 
                         Bitmap bitmap = new Bitmap(grabResult.Width, grabResult.Height, PixelFormat.Format32bppRgb);
                         // Lock the bits of the bitmap.
@@ -265,13 +412,82 @@ namespace BalserCamera
                         // Place the pointer to the buffer of the bitmap.
                         converter.OutputPixelFormat = PixelType.BGRA8packed;
                         IntPtr ptrBmp = bmpData.Scan0;
-                        converter.Convert(ptrBmp, bmpData.Stride * bitmap.Height, grabResult); //Exception handling TODO
+                        converter.Convert(ptrBmp, bmpData.Stride * bitmap.Height, grabResult);              
                         bitmap.UnlockBits(bmpData);
-                        Bitmap temp = bitmap;
-                        CallFunction(null, temp);                       
+                        Bitmap temp = (Bitmap)bitmap.Clone();
+                        CallFunction(null, temp);
+                        
+                            //Thread.Sleep(15);
+                        if (bitmap != null)
+                            bitmap.Dispose();
+
+                       GC.Collect();
                     }
                 }
+                catch (Exception exception)
+                {
+               
+                }
+            }
+                
         }
 
-    }
+        private static T DeepCopyByBin<T>(T obj)
+        {
+            object retval;
+            using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
+            {
+                System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = 
+                       new  System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                bf.Serialize(ms, obj);
+                ms.Seek(0, System.IO.SeekOrigin.Begin);
+                retval = bf.Deserialize(ms);
+                ms.Close();
+            }
+            return (T)retval;
+         }
+
+        public Bitmap CopyBitmap(Bitmap source)
+        {
+            int depth = Bitmap.GetPixelFormatSize(source.PixelFormat);
+            if (depth != 8 && depth != 24 && depth != 32)
+            {
+                return null;
+            }
+            Bitmap destination = new Bitmap(source.Width, source.Height, source.PixelFormat);
+            BitmapData source_bitmapdata = null;
+            BitmapData destination_bitmapdata = null;
+            try
+            {
+                source_bitmapdata = source.LockBits(new Rectangle(0, 0, source.Width, source.Height), ImageLockMode.ReadWrite,
+                                                source.PixelFormat);
+                destination_bitmapdata = destination.LockBits(new Rectangle(0, 0, destination.Width, destination.Height), ImageLockMode.ReadWrite,
+                                                destination.PixelFormat);
+                unsafe
+                {
+                    byte* source_ptr = (byte*)source_bitmapdata.Scan0;
+                    byte* destination_ptr = (byte*)destination_bitmapdata.Scan0;
+
+                    
+                    for (int i = 0; i < (source.Width * source.Height * (depth / 8)); i++)
+                    {
+                        *destination_ptr = *source_ptr;
+                        source_ptr++;
+                        destination_ptr++;
+                    }
+                }
+                source.UnlockBits(source_bitmapdata);
+                destination.UnlockBits(destination_bitmapdata);
+                return destination;
+            }
+            catch
+            {
+                destination.Dispose();
+                return null;
+            }
+        }
+
+    }//end class 
+
+
 }

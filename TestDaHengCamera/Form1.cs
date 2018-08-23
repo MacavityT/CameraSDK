@@ -45,11 +45,12 @@ namespace TestDaHengCamera
             cameras[0].OpenStream();
 
             cameras[1].TriggerMode = AqDevice.TriggerModes.Unknow;
-            cameras[1].ExposureTime = 500;
+            cameras[1].ExposureTime = 5000;
             cameras[1].Name = "Aqrose2";
             cameras[1].RegisterCaptureCallback(new AqCaptureDelegate(RecCapture1));
             cameras[1].OpenCamera();
             cameras[1].OpenStream();
+            this.timer1.Start();
 
 
         }
@@ -67,6 +68,7 @@ namespace TestDaHengCamera
 
         private void closecamera_Click(object sender, EventArgs e)
         {
+            this.timer1.Stop();
             cameras[0].CloseCamera();
             cameras[1].CloseCamera();
             Thread.Sleep(20);
@@ -81,6 +83,12 @@ namespace TestDaHengCamera
         public void RecCapture1(object objUserparam, Bitmap bitmap)
         {
             this.pictureBox2.Image = bitmap;
+        }
+
+        private void timer1_Tick(object sender, System.EventArgs e)
+        {
+            cameras[0].TriggerSoftware();
+            cameras[1].TriggerSoftware();
         }
     }
 }

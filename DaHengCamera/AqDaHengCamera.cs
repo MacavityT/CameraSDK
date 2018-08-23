@@ -371,19 +371,49 @@ namespace DaHengCamera
         ////////////////////////////////////////////////////////////
         private void __OnFrameCallbackFun(object objUserParam, IFrameData objIFrameData)
         {
-            IntPtr pBufferMono = IntPtr.Zero;
-            pBufferMono = objIFrameData.GetBuffer();
-            int stride = __GetStride((int)objIFrameData.GetWidth(), false);
-            byte[] m_byMonoBuffer = null;
-            m_byMonoBuffer = new byte[stride * (int)objIFrameData.GetHeight()];
+            //IntPtr pBufferMono = IntPtr.Zero;
+            //pBufferMono = objIFrameData.GetBuffer();
+            //int stride = __GetStride((int)objIFrameData.GetWidth(), false);
+            //byte[] m_byMonoBuffer = null;
+            //m_byMonoBuffer = new byte[stride * (int)objIFrameData.GetHeight()];
 
-            Marshal.Copy(pBufferMono, m_byMonoBuffer, 0, stride * (int)objIFrameData.GetHeight());
+            //Marshal.Copy(pBufferMono, m_byMonoBuffer, 0, stride * (int)objIFrameData.GetHeight());
 
-            GCHandle hObject = GCHandle.Alloc(m_byMonoBuffer, GCHandleType.Pinned);
-            IntPtr pObject = hObject.AddrOfPinnedObject();
 
-            Bitmap bmp = BuiltGrayBitmap(m_byMonoBuffer, (int)objIFrameData.GetWidth(), (int)objIFrameData.GetHeight());
-            CallFunction(null, bmp);
+            //GCHandle hObject = GCHandle.Alloc(m_byMonoBuffer, GCHandleType.Pinned);
+            //IntPtr pObject = hObject.AddrOfPinnedObject();
+
+            //Bitmap bmp = BuiltGrayBitmap(m_byMonoBuffer, (int)objIFrameData.GetWidth(), (int)objIFrameData.GetHeight());
+            //// Bitmap tempbmp = (Bitmap)bmp.Clone();
+            //CallFunction(null, bmp);
+
+            //hObject.Free();
+            ////if (bmp != null)
+            ////    bmp.Dispose();
+
+            //GC.Collect();
+
+
+            Bitmap dec = new Bitmap((int)objIFrameData.GetWidth(), (int)objIFrameData.GetHeight(), PixelFormat.Format8bppIndexed);
+            ColorPalette palette = dec.Palette;
+            for (int i = 0; i < 256; i++)
+            {
+                palette.Entries[i] = Color.FromArgb(i, i, i);
+            }
+            dec.Palette = palette;
+            Rectangle rect = new Rectangle(0, 0, dec.Width, dec.Height);
+            BitmapData decBmpData = dec.LockBits(rect, ImageLockMode.ReadWrite, dec.PixelFormat);
+
+            IntPtr ptrSrc = objIFrameData.ConvertToRaw8(GX_VALID_BIT_LIST.GX_BIT_0_7);
+            byte[] p_byteSrc = new byte[objIFrameData.GetPayloadSize()];
+            int stride = (int)objIFrameData.GetWidth();
+            int buffsize = stride * (int)objIFrameData.GetHeight();
+            Marshal.Copy(ptrSrc, p_byteSrc, 0, buffsize);
+            Marshal.Copy(p_byteSrc, 0, decBmpData.Scan0, buffsize);
+            dec.UnlockBits(decBmpData);
+            CallFunction(this, dec);
+
+
         }
 
 
