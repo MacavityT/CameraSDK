@@ -1,0 +1,8 @@
+E:\CollectCamera\CollectCamera\bin\Release\TestHikVisionCamera.exe.config
+E:\CollectCamera\CollectCamera\bin\Release\TestHikVisionCamera.exe
+E:\CollectCamera\CollectCamera\bin\Release\TestHikVisionCamera.pdb
+E:\CollectCamera\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.Form1.resources
+E:\CollectCamera\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.Properties.Resources.resources
+E:\CollectCamera\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.csproj.GenerateResource.Cache
+E:\CollectCamera\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.exe
+E:\CollectCamera\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.pdb

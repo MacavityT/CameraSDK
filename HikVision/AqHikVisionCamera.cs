@@ -188,7 +188,15 @@ namespace HikVision
                 if (MyCamera.MV_GIGE_DEVICE == stDevInfo.nTLayerType)
                 {
                     MyCamera.MV_GIGE_DEVICE_INFO stGigEDeviceInfo = (MyCamera.MV_GIGE_DEVICE_INFO)MyCamera.ByteToStruct(stDevInfo.SpecialInfo.stGigEInfo, typeof(MyCamera.MV_GIGE_DEVICE_INFO));
-                    if (stGigEDeviceInfo.chUserDefinedName == this.Name)
+
+                    // ch:显示IP | en:Display IP
+                    UInt32 nIp1 = (stGigEDeviceInfo.nCurrentIp & 0xFF000000) >> 24;
+                    UInt32 nIp2 = (stGigEDeviceInfo.nCurrentIp & 0x00FF0000) >> 16;
+                    UInt32 nIp3 = (stGigEDeviceInfo.nCurrentIp & 0x0000FF00) >> 8;
+                    UInt32 nIp4 = (stGigEDeviceInfo.nCurrentIp & 0x000000FF);
+                    string tempCameraIp = nIp1.ToString() + "." + nIp2.ToString() + "." + nIp3.ToString() + "." + nIp4.ToString();
+
+                    if (stGigEDeviceInfo.chUserDefinedName == this.Name || tempCameraIp == this.Ip)
                     {
                         nRet = getonecamera.MV_CC_CreateDevice_NET(ref stDevInfo);
                         if (MyCamera.MV_OK != nRet)
@@ -203,8 +211,6 @@ namespace HikVision
                             Console.WriteLine("Open device failed:{0:x8}", nRet);
                             return 0;
                         }
-
-                        /** if you need 
                         // ch:探测网络最佳包大小(只对GigE相机有效) | en:Detection network optimal package size(It only works for the GigE camera)
                         if (stDevInfo.nTLayerType == MyCamera.MV_GIGE_DEVICE)
                         {
@@ -222,7 +228,6 @@ namespace HikVision
                                 Console.WriteLine("Warning: Get Packet Size failed {0:x8}", nPacketSize);
                             }
                         }
-                         * */
                       
                      }                                        
                   }
@@ -329,6 +334,12 @@ namespace HikVision
                     Console.WriteLine("Set TriggerMode failed!");
                    
                 }
+
+                nRet = getonecamera.MV_CC_SetTriggerDelay_NET(0);
+                if (nRet != MyCamera.MV_OK)
+                {
+                    Console.WriteLine("Set GainAuto failed!");
+                }
             }
             else if (TriggerMode == TriggerModes.Unknow)
             {
@@ -346,6 +357,12 @@ namespace HikVision
                     
                 }
 
+                nRet = getonecamera.MV_CC_SetTriggerDelay_NET(0);
+                if (nRet != MyCamera.MV_OK)
+                {
+                    Console.WriteLine("Set GainAuto failed!");
+                }
+
             }
             else
             {
@@ -360,7 +377,21 @@ namespace HikVision
                 if (MyCamera.MV_OK != nRet)
                 {
                     Console.WriteLine("Set TriggerSource failed!");
-                    
+
+                }
+
+                //rising edge
+                nRet = getonecamera.MV_CC_SetEnumValue_NET("TriggerActivation", 1);
+                if (MyCamera.MV_OK != nRet)
+                {
+                    Console.WriteLine("Set TriggerActivation failed!");
+
+                }
+
+                nRet = getonecamera.MV_CC_SetTriggerDelay_NET(0);
+                if (nRet != MyCamera.MV_OK)
+                {
+                    Console.WriteLine("Set GainAuto failed!");
                 }
 
             }
@@ -408,12 +439,7 @@ namespace HikVision
 
         public void SetExposureTime()
         {
-            nRet = getonecamera.MV_CC_SetTriggerDelay_NET(0);
-            if (nRet != MyCamera.MV_OK)
-            {
-                Console.WriteLine("Set GainAuto failed!");
-            }
-
+           
             nRet = getonecamera.MV_CC_SetFloatValue_NET("ExposureMode",0);
             if (nRet != MyCamera.MV_OK)
             {

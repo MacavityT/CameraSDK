@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBaslerCamera", "TestBas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HikVision", "HikVision\HikVision.csproj", "{00E85D22-ABA6-4B8E-A1C4-64821069A4D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHikVisionCamera", "TestHikVisionCamera\TestHikVisionCamera.csproj", "{62F20705-09FF-4AC1-B853-192C680C1EF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,12 @@ Global
 		{00E85D22-ABA6-4B8E-A1C4-64821069A4D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00E85D22-ABA6-4B8E-A1C4-64821069A4D3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{00E85D22-ABA6-4B8E-A1C4-64821069A4D3}.Release|x64.ActiveCfg = Release|Any CPU
+		{62F20705-09FF-4AC1-B853-192C680C1EF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62F20705-09FF-4AC1-B853-192C680C1EF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62F20705-09FF-4AC1-B853-192C680C1EF0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{62F20705-09FF-4AC1-B853-192C680C1EF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62F20705-09FF-4AC1-B853-192C680C1EF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62F20705-09FF-4AC1-B853-192C680C1EF0}.Release|x64.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -397,7 +397,6 @@ namespace BalserCamera
         {
             using (new TimeTicker("AAAA 显示消耗的时间"))
             {
- 
                 try 
                 {
                     // Get the grab result.
