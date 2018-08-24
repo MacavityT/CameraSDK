@@ -48,7 +48,7 @@ namespace TestHikVisionCamera
 ;
             cameras[0].RegisterCaptureCallback(new AqCaptureDelegate(RecCapture));
       //      cameras[0].RegisterAcquisitionCallback(new AqAcquisitionDelegate(RecAcquisition));
-            cameras[0].ExposureTime = 35000;
+            cameras[0].ExposureTime = 2000;
             cameras[0].OpenCamera();
             if (cameras[0].OpenStream() == 1)
                 opencammeraflag = true;
@@ -93,7 +93,7 @@ namespace TestHikVisionCamera
                 Thread.Sleep(20);
                 cameras[0].RegisterCaptureCallback(new AqCaptureDelegate(RecCapture));
      //           cameras[0].RegisterAcquisitionCallback(new AqAcquisitionDelegate(RecAcquisition));
-                cameras[0].ExposureTime = 35000;
+                cameras[0].ExposureTime = 2000;
                 cameras[0].OpenCamera();
                 if (cameras[0].OpenStream() == 1)
                     opencammeraflag = true;
@@ -108,7 +108,7 @@ namespace TestHikVisionCamera
                 Thread.Sleep(20);
                 opencammeraflag = false;
                 cameras[0].RegisterCaptureCallback(new AqCaptureDelegate(RecCapture));
-                cameras[0].ExposureTime = 35000;
+                cameras[0].ExposureTime = 2000;
                 cameras[0].OpenCamera();
                 if (cameras[0].OpenStream() == 1)
                     opencammeraflag = true;

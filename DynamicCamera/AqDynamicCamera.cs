@@ -24,6 +24,13 @@ namespace Camera_Dynamic
         private double gain;
         private bool gainauto;
 
+
+        //set image ROI
+        private Int64 imagewidth;
+        private Int64 imageheight;
+        private Int64 imageoffsetX;
+        private Int64 imageoffsetY;
+
         private AqDevice.TriggerSources triggersource;
         private AqDevice.TriggerSwitchs triggerswitchs;
         private AqDevice.TriggerModes triggermodes;
@@ -92,6 +99,32 @@ namespace Camera_Dynamic
             get { return gainauto; }
             set { gainauto = value; }
         }
+
+        //set param ROI
+        public Int64 ImageWidth
+        {
+            get { return imagewidth; }
+            set { imagewidth = value; }
+        }
+
+        public Int64 ImageHeight
+        {
+            get { return imageheight; }
+            set { imageheight = value; }
+        }
+
+        public Int64 ImageoffsetX
+        {
+            get { return imageoffsetX; }
+            set { imageoffsetX = value; }
+        }
+
+        public Int64 ImageoffsetY
+        {
+            get { return imageoffsetY; }
+            set { imageoffsetY = value; }
+        }
+        //set param ROI
 
         public AqDevice.TriggerSources TriggerSource
         {

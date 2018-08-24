@@ -93,6 +93,28 @@ namespace AqDevice
             set;
         }
 
+        //set image ROI
+        Int64 ImageWidth
+        {
+            get;
+            set;
+        }
+        Int64 ImageHeight
+        {
+            get;
+            set;
+        }
+        Int64 ImageoffsetX
+        {
+            get;
+            set;
+        }
+        Int64 ImageoffsetY
+        {
+            get;
+            set;
+        }
+
         void RegisterCaptureCallback(AqCaptureDelegate delCaptureFun);
 
         void TriggerSoftware();

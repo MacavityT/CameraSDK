@@ -38,21 +38,13 @@ namespace TestDaHengCamera
             cameramanager.Init();
             cameras = cameramanager.GetCameras();
             cameras[0].TriggerMode = AqDevice.TriggerModes.Unknow;
-            cameras[0].ExposureTime = 100000;
-            cameras[0].Name = "Aqrose1";
+           // cameras[0].TriggerSource = AqDevice.TriggerSources.Software;
+            cameras[0].ExposureTime = 50000;
+            cameras[0].Name = "Aqrose2";
             cameras[0].RegisterCaptureCallback(new AqCaptureDelegate(RecCapture));
             cameras[0].OpenCamera();
             cameras[0].OpenStream();
-
-            cameras[1].TriggerMode = AqDevice.TriggerModes.Unknow;
-            cameras[1].ExposureTime = 5000;
-            cameras[1].Name = "Aqrose2";
-            cameras[1].RegisterCaptureCallback(new AqCaptureDelegate(RecCapture1));
-            cameras[1].OpenCamera();
-            cameras[1].OpenStream();
-            this.timer1.Start();
-
-
+        
         }
 
         private void openstream_Click(object sender, EventArgs e)
@@ -62,15 +54,12 @@ namespace TestDaHengCamera
 
         private void closestream_Click(object sender, EventArgs e)
         {
-            cameras[0].TriggerSoftware();
-            cameras[1].TriggerSoftware();
-        }
+            cameras[0].TriggerSoftware();        }
 
         private void closecamera_Click(object sender, EventArgs e)
         {
             this.timer1.Stop();
-            cameras[0].CloseCamera();
-            cameras[1].CloseCamera();
+            cameras[0].CloseCamera();          
             Thread.Sleep(20);
             Application.Exit();
         }
@@ -78,17 +67,11 @@ namespace TestDaHengCamera
         public void RecCapture(object objUserparam, Bitmap bitmap)
         {
             this.pictureBox1.Image = bitmap;
-        }
-
-        public void RecCapture1(object objUserparam, Bitmap bitmap)
-        {
-            this.pictureBox2.Image = bitmap;
-        }
+        } 
 
         private void timer1_Tick(object sender, System.EventArgs e)
         {
             cameras[0].TriggerSoftware();
-            cameras[1].TriggerSoftware();
         }
     }
 }

@@ -30,8 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AqDevice">
-      <HintPath>.\AqDevice.dll</HintPath>
+    <Reference Include="AqDevice, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Release\AqDevice.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

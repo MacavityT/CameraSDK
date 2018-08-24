@@ -261,9 +261,8 @@ namespace HikVision
 
         public int OpenStream()
         {
-
             TriggerConfiguration();
-            SetExposureTime();
+            SetExposureTime();                       
             SetImageROI();
             nRet = getonecamera.MV_CC_RegisterImageCallBackEx_NET(ImageCallback, IntPtr.Zero);
             if (MyCamera.MV_OK != nRet)
@@ -279,7 +278,7 @@ namespace HikVision
                 Console.WriteLine("Start grabbing failed:{0:x8}", nRet);
                 return 0;
             }
-
+            
             return 1;
         }
 
@@ -364,7 +363,7 @@ namespace HikVision
                 }
 
             }
-            else
+            else if (TriggerMode == TriggerModes.HardWare)
             {
                 nRet = getonecamera.MV_CC_SetEnumValue_NET("TriggerMode", 1);
                 if (MyCamera.MV_OK != nRet)
@@ -372,12 +371,35 @@ namespace HikVision
                     Console.WriteLine("Set TriggerMode failed!");
 
                 }
-
-                nRet = getonecamera.MV_CC_SetEnumValue_NET("TriggerSource", 1);
-                if (MyCamera.MV_OK != nRet)
+                //           1 - Line1;
+                //           2 - Line2;
+                //           3 - Line3;
+                if (TriggerSource == AqDevice.TriggerSources.Line1)
                 {
-                    Console.WriteLine("Set TriggerSource failed!");
+                    nRet = getonecamera.MV_CC_SetEnumValue_NET("TriggerSource", 1);
+                    if (MyCamera.MV_OK != nRet)
+                    {
+                        Console.WriteLine("Set TriggerSource failed!");
 
+                    }
+                }
+                else if (TriggerSource == AqDevice.TriggerSources.Line2)
+                {
+                    nRet = getonecamera.MV_CC_SetEnumValue_NET("TriggerSource", 2);
+                    if (MyCamera.MV_OK != nRet)
+                    {
+                        Console.WriteLine("Set TriggerSource failed!");
+
+                    }
+                }
+                else if (TriggerSource == AqDevice.TriggerSources.Line3)
+                {
+                    nRet = getonecamera.MV_CC_SetEnumValue_NET("TriggerSource", 2);
+                    if (MyCamera.MV_OK != nRet)
+                    {
+                        Console.WriteLine("Set TriggerSource failed!");
+
+                    }
                 }
 
                 //rising edge
@@ -409,16 +431,44 @@ namespace HikVision
         {
             try
             {
-                nRet = getonecamera.MV_CC_SetHeight_NET((uint)ImageWidth);
-                if (nRet != MyCamera.MV_OK)
+                MyCamera.MVCC_INTVALUE pstValue = new MyCamera.MVCC_INTVALUE();
+                nRet = getonecamera.MV_CC_GetWidth_NET(ref pstValue);
+
+                if ((uint)ImageWidth > pstValue.nMin && (uint)ImageWidth < pstValue.nMax)
                 {
-                    Console.WriteLine("Set ImageWidth failed!");
+                    nRet = getonecamera.MV_CC_SetWidth_NET((uint)ImageWidth);
+                    if (nRet != MyCamera.MV_OK)
+                    {
+                        Console.WriteLine("Set ImageWidth failed!");
+                    }
                 }
-                nRet = getonecamera.MV_CC_SetWidth_NET((uint)ImageHeight);
-                if (nRet != MyCamera.MV_OK)
+                else
                 {
-                    Console.WriteLine("Set ImageHeight failed!");
+                    nRet = getonecamera.MV_CC_SetWidth_NET(pstValue.nMax);
+                    if (nRet != MyCamera.MV_OK)
+                    {
+                        Console.WriteLine("Set ImageWidth failed!");
+                    }
                 }
+
+                nRet = getonecamera.MV_CC_GetHeight_NET(ref pstValue);
+                if ((uint)ImageHeight > pstValue.nMin && (uint)ImageHeight < pstValue.nMax)
+                {
+                    nRet = getonecamera.MV_CC_SetHeight_NET((uint)ImageHeight);
+                    if (nRet != MyCamera.MV_OK)
+                    {
+                        Console.WriteLine("Set ImageWidth failed!");
+                    }
+                }
+                else
+                {
+                    nRet = getonecamera.MV_CC_SetHeight_NET(pstValue.nMax);
+                    if (nRet != MyCamera.MV_OK)
+                    {
+                        Console.WriteLine("Set ImageWidth failed!");
+                    }
+                }
+              
                 nRet = getonecamera.MV_CC_SetAOIoffsetX_NET((uint)ImageoffsetX);
                 if (nRet != MyCamera.MV_OK)
                 {
@@ -439,25 +489,36 @@ namespace HikVision
 
         public void SetExposureTime()
         {
-           
-            nRet = getonecamera.MV_CC_SetFloatValue_NET("ExposureMode",0);
+            MyCamera.MVCC_FLOATVALUE stParam = new MyCamera.MVCC_FLOATVALUE();
+
+            nRet = getonecamera.MV_CC_GetFloatValue_NET("ExposureTime", ref stParam);
+            if (nRet == MyCamera.MV_OK)
+            {
+                // something is wrong,the param can not set
+                nRet = getonecamera.MV_CC_SetEnumValue_NET("ExposureAuto", 0);
+                if (nRet != MyCamera.MV_OK)
+                {
+                    Console.WriteLine("Set ExposureAuto failed!");
+                }
+            }
+            
+            nRet = getonecamera.MV_CC_SetEnumValueByString_NET("ExposureMode", "Timed");
             if (nRet != MyCamera.MV_OK)
             {
                 Console.WriteLine("Set ExposureMode failed!");
             }
+           
+            nRet = getonecamera.MV_CC_GetFloatValue_NET("ExposureTime", ref stParam);
 
-            nRet = getonecamera.MV_CC_SetFloatValue_NET("ExposureTime", (float)ExposureTime);
-            if (nRet != MyCamera.MV_OK)
+            if ((float)ExposureTime > stParam.fMin && (float)ExposureTime < stParam.fMax)
             {
-                Console.WriteLine("Set ExposureTime failed!");
+                nRet = getonecamera.MV_CC_SetFloatValue_NET("ExposureTime", (float)ExposureTime);
+                if (nRet != MyCamera.MV_OK)
+                {
+                    Console.WriteLine("Set ExposureTime failed!");
+                }
             }
-
-            nRet = getonecamera.MV_CC_SetEnumValue_NET("ExposureAuto", 0);
-            if (nRet != MyCamera.MV_OK)
-            {
-                Console.WriteLine("Set ExposureAuto failed!");
-            }
-
+           
             nRet = getonecamera.MV_CC_SetEnumValue_NET("GainAuto", 0);
             if (nRet != MyCamera.MV_OK)
             {

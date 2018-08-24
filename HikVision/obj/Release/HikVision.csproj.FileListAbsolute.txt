@@ -2,3 +2,4 @@ E:\CollectCamera\CollectCamera\bin\Release\HikVision.dll
 E:\CollectCamera\CollectCamera\bin\Release\HikVision.pdb
 E:\CollectCamera\CollectCamera\HikVision\obj\Release\HikVision.dll
 E:\CollectCamera\CollectCamera\HikVision\obj\Release\HikVision.pdb
+E:\CollectCamera\CollectCamera\HikVision\obj\Release\HikVision.csprojResolveAssemblyReference.cache

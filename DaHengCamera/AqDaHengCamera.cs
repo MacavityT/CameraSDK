@@ -26,6 +26,12 @@ namespace DaHengCamera
         private double gain;
         private bool gainauto;
 
+        //set image ROI
+        private Int64 imagewidth;
+        private Int64 imageheight;
+        private Int64 imageoffsetX;
+        private Int64 imageoffsetY;
+
 
         private AqDevice.TriggerSources triggersource;
         private AqDevice.TriggerSwitchs triggerswitchs;
@@ -103,6 +109,32 @@ namespace DaHengCamera
             get { return gainauto; }
             set { gainauto = value; }
         }
+
+        //set param ROI
+        public Int64 ImageWidth
+        {
+            get { return imagewidth; }
+            set { imagewidth = value; }
+        }
+
+        public Int64 ImageHeight
+        {
+            get { return imageheight; }
+            set { imageheight = value; }
+        }
+
+        public Int64 ImageoffsetX
+        {
+            get { return imageoffsetX; }
+            set { imageoffsetX = value; }
+        }
+
+        public Int64 ImageoffsetY
+        {
+            get { return imageoffsetY; }
+            set { imageoffsetY = value; }
+        }
+        //set param ROI
 
         public AqDevice.TriggerSources TriggerSource
         {
@@ -211,30 +243,58 @@ namespace DaHengCamera
             return 0;
         }
 
+        public void SetImageROI()
+        {
+            
+
+        }
+
         private void TriggerConfiguration()
         {
             if (triggermodes == TriggerModes.Continuous)
             {
                 m_objIGXFeatureControl.GetEnumFeature("TriggerMode").SetValue("Off");
                 m_objIGXFeatureControl.GetEnumFeature("AcquisitionMode").SetValue("Continuous");
+                m_objIGXFeatureControl.GetFloatFeature("TriggerDelay").SetValue(0);
             }
             else if (triggermodes == TriggerModes.Unknow)
             {
                 m_objIGXFeatureControl.GetEnumFeature("TriggerMode").SetValue("On");
                 m_objIGXFeatureControl.GetEnumFeature("TriggerSource").SetValue("Software");
                 m_objIGXFeatureControl.GetEnumFeature("TriggerActivation").SetValue("RisingEdge");
+                m_objIGXFeatureControl.GetFloatFeature("TriggerDelay").SetValue(0);
 
             }
-            else 
-            {
-                m_objIGXFeatureControl.GetEnumFeature("TriggerMode").SetValue("on");
-                m_objIGXFeatureControl.GetEnumFeature("TriggerSource").SetValue("Line0");
+            else if (triggermodes == TriggerModes.HardWare)
+            {   //Line0,Line2,Line3
+                m_objIGXFeatureControl.GetEnumFeature("TriggerMode").SetValue("On");
+                if (triggersource == AqDevice.TriggerSources.Line0)
+                {
+                    m_objIGXFeatureControl.GetEnumFeature("TriggerSource").SetValue("Line0");
+                    m_objIGXFeatureControl.GetFloatFeature("TriggerDelay").SetValue(0);
+                }
+                else if (triggersource == AqDevice.TriggerSources.Line2)
+                {
+                    m_objIGXFeatureControl.GetEnumFeature("TriggerSource").SetValue("Line2");
+                    m_objIGXFeatureControl.GetFloatFeature("TriggerDelay").SetValue(0);
+                }
+                else if (triggersource == AqDevice.TriggerSources.Line3)
+                {
+                    m_objIGXFeatureControl.GetEnumFeature("TriggerSource").SetValue("Line3");
+                    m_objIGXFeatureControl.GetFloatFeature("TriggerDelay").SetValue(0);
+                }
+                //FallingEdge,RisingEdge
                 m_objIGXFeatureControl.GetEnumFeature("TriggerActivation").SetValue("RisingEdge");
+                //Filter
+                m_objIGXFeatureControl.GetFloatFeature("TriggerFilterRaisingEdge").SetValue(0);
             }
         }
 
         public void SetExposureTime()
         {
+            m_objIGXFeatureControl.GetEnumFeature("ExposureAuto").SetValue("Off");
+            m_objIGXFeatureControl.GetEnumFeature("ExposureMode").SetValue("Timed");
+            
             double dMin = 0.0;                     
             double dMax = 0.0;
             dMin = m_objIGXFeatureControl.GetFloatFeature("ExposureTime").GetMin();
@@ -243,6 +303,9 @@ namespace DaHengCamera
             if(exposuretime >= dMin && exposuretime <= dMax)
                 m_objIGXFeatureControl.GetFloatFeature("ExposureTime").SetValue(exposuretime);
 
+            m_objIGXFeatureControl.GetEnumFeature("GainAuto").SetValue("Off");
+            m_objIGXFeatureControl.GetFloatFeature("Gain").SetValue(0);
+            
         }
 
         public  int OpenStream()
@@ -411,7 +474,7 @@ namespace DaHengCamera
             Marshal.Copy(ptrSrc, p_byteSrc, 0, buffsize);
             Marshal.Copy(p_byteSrc, 0, decBmpData.Scan0, buffsize);
             dec.UnlockBits(decBmpData);
-            CallFunction(this, dec);
+            CallFunction(this.Name, dec);
 
 
         }

@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AqCameraBase.cs" />
     <Compile Include="AqCaptureDelegate.cs" />
     <Compile Include="ExposureMode.cs" />
     <Compile Include="IAqCamera.cs" />

@@ -202,7 +202,7 @@ namespace BalserCamera
                     getonecamera.StreamGrabber.Start(GrabStrategy.OneByOne, GrabLoop.ProvidedByStreamGrabber);
                     return 1;
                 }
-                else
+                else if (triggermodes == TriggerModes.Unknow)
                 {
                     getonecamera.StreamGrabber.ImageGrabbed += OnImageGrabbed;
                     getonecamera.Parameters[PLCamera.TriggerSelector].SetValue(PLCamera.TriggerSelector.FrameStart);
@@ -216,6 +216,37 @@ namespace BalserCamera
                     getonecamera.Parameters[PLCamera.AcquisitionFrameCount].SetValue(2);
                     getonecamera.StreamGrabber.Start(GrabStrategy.OneByOne, GrabLoop.ProvidedByStreamGrabber);
 
+                }
+                else if (triggermodes == TriggerModes.HardWare)
+                {
+                    getonecamera.StreamGrabber.ImageGrabbed += OnImageGrabbed;
+                    getonecamera.Parameters[PLCamera.TriggerSelector].SetValue(PLCamera.TriggerSelector.FrameStart);
+                    getonecamera.Parameters[PLCamera.TriggerMode].SetValue(PLCamera.TriggerMode.On);
+
+                    if (triggersource == AqDevice.TriggerSources.Line1)
+                    {
+                        getonecamera.Parameters[PLCamera.TriggerSource].SetValue(PLCamera.TriggerSource.Line1);
+                    }
+                    else if (triggersource == AqDevice.TriggerSources.Line2)
+                    {
+                        getonecamera.Parameters[PLCamera.TriggerSource].SetValue(PLCamera.TriggerSource.Line2);
+                    }
+                    else if (triggersource == AqDevice.TriggerSources.Line3)
+                    {
+                        getonecamera.Parameters[PLCamera.TriggerSource].SetValue(PLCamera.TriggerSource.Line3);
+                    }
+                    else if (triggersource == AqDevice.TriggerSources.Line4)
+                    {
+                        getonecamera.Parameters[PLCamera.TriggerSource].SetValue(PLCamera.TriggerSource.Line4);
+                    }
+                    
+                    getonecamera.Parameters[PLCamera.TriggerActivation].SetValue(PLCamera.TriggerActivation.RisingEdge);
+                    getonecamera.Parameters[PLCamera.TriggerDelayAbs].SetValue(0);
+                    getonecamera.Parameters[PLCamera.ExposureMode].SetValue(PLCamera.ExposureMode.Timed);
+                    getonecamera.Parameters[PLCamera.ExposureAuto].SetValue(PLCamera.ExposureAuto.Off);
+                    getonecamera.Parameters[PLCamera.AcquisitionStatusSelector].SetValue(PLCamera.AcquisitionStatusSelector.FrameTriggerWait);
+                    getonecamera.Parameters[PLCamera.AcquisitionFrameCount].SetValue(2);
+                    getonecamera.StreamGrabber.Start(GrabStrategy.OneByOne, GrabLoop.ProvidedByStreamGrabber);
                 }
                 return 1;
             }
@@ -414,7 +445,7 @@ namespace BalserCamera
                         converter.Convert(ptrBmp, bmpData.Stride * bitmap.Height, grabResult);              
                         bitmap.UnlockBits(bmpData);
                         Bitmap temp = (Bitmap)bitmap.Clone();
-                        CallFunction(null, temp);
+                        CallFunction(this.Name, temp);
                         
                             //Thread.Sleep(15);
                         if (bitmap != null)
