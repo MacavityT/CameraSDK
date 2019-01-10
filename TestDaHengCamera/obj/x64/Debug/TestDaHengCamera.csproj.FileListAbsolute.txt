@@ -1,0 +1,12 @@
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDaHengCamera\bin\x64\Debug\TestDaHengCamera.exe.config
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDaHengCamera\bin\x64\Debug\TestDaHengCamera.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDaHengCamera\bin\x64\Debug\TestDaHengCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDaHengCamera\bin\x64\Debug\AqDevice.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDaHengCamera\bin\x64\Debug\AqDevice.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDaHengCamera\obj\x64\Debug\TestDaHengCamera.Form1.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDaHengCamera\obj\x64\Debug\TestDaHengCamera.Properties.Resources.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDaHengCamera\obj\x64\Debug\TestDaHengCamera.csproj.GenerateResource.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDaHengCamera\obj\x64\Debug\TestDaHengCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDaHengCamera\obj\x64\Debug\TestDaHengCamera.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDaHengCamera\obj\x64\Debug\TestDaHengCamera.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDaHengCamera\obj\x64\Debug\TestDaHengCamera.pdb

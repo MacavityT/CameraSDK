@@ -199,12 +199,14 @@ namespace BalserCamera
                 if (triggermodes == TriggerModes.Continuous)
                 {
                     getonecamera.StreamGrabber.ImageGrabbed += OnImageGrabbed;
+                    getonecamera.Parameters[PLCamera.PixelFormat].SetValue(PLCamera.PixelFormat.Mono8);
                     getonecamera.StreamGrabber.Start(GrabStrategy.OneByOne, GrabLoop.ProvidedByStreamGrabber);
                     return 1;
                 }
                 else if (triggermodes == TriggerModes.Unknow)
                 {
                     getonecamera.StreamGrabber.ImageGrabbed += OnImageGrabbed;
+                    getonecamera.Parameters[PLCamera.PixelFormat].SetValue(PLCamera.PixelFormat.Mono8);
                     getonecamera.Parameters[PLCamera.TriggerSelector].SetValue(PLCamera.TriggerSelector.FrameStart);
                     getonecamera.Parameters[PLCamera.TriggerMode].SetValue(PLCamera.TriggerMode.On);
                     getonecamera.Parameters[PLCamera.TriggerSource].SetValue(PLCamera.TriggerSource.Software);
@@ -220,6 +222,7 @@ namespace BalserCamera
                 else if (triggermodes == TriggerModes.HardWare)
                 {
                     getonecamera.StreamGrabber.ImageGrabbed += OnImageGrabbed;
+                    getonecamera.Parameters[PLCamera.PixelFormat].SetValue(PLCamera.PixelFormat.Mono8);
                     getonecamera.Parameters[PLCamera.TriggerSelector].SetValue(PLCamera.TriggerSelector.FrameStart);
                     getonecamera.Parameters[PLCamera.TriggerMode].SetValue(PLCamera.TriggerMode.On);
 
@@ -436,11 +439,17 @@ namespace BalserCamera
                     if (grabResult.IsValid)
                     {
 
-                        Bitmap bitmap = new Bitmap(grabResult.Width, grabResult.Height, PixelFormat.Format32bppRgb);
+                        Bitmap bitmap = new Bitmap(grabResult.Width, grabResult.Height, PixelFormat.Format8bppIndexed);
+                        ColorPalette palette = bitmap.Palette;
+                        for (int i = 0; i < 256; i++)
+                        {
+                            palette.Entries[i] = Color.FromArgb(i, i, i);
+                        }
+                        bitmap.Palette = palette;
                         // Lock the bits of the bitmap.
                         BitmapData bmpData = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height), ImageLockMode.ReadWrite, bitmap.PixelFormat);
                         // Place the pointer to the buffer of the bitmap.
-                        converter.OutputPixelFormat = PixelType.BGRA8packed;
+                        converter.OutputPixelFormat = PixelType.Mono8;
                         IntPtr ptrBmp = bmpData.Scan0;
                         converter.Convert(ptrBmp, bmpData.Stride * bitmap.Height, grabResult);              
                         bitmap.UnlockBits(bmpData);

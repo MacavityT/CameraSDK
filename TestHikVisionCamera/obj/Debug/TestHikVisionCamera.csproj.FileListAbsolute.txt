@@ -1,0 +1,13 @@
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\bin\Debug\TestHikVisionCamera.exe.config
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\bin\Debug\TestHikVisionCamera.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\bin\Debug\TestHikVisionCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\bin\Debug\AqDevice.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\obj\Debug\TestHikVisionCamera.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\obj\Debug\TestHikVisionCamera.Form1.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\obj\Debug\TestHikVisionCamera.Properties.Resources.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\obj\Debug\TestHikVisionCamera.csproj.GenerateResource.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\obj\Debug\TestHikVisionCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\obj\Debug\TestHikVisionCamera.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\obj\Debug\TestHikVisionCamera.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\obj\Debug\TestHikVisionCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestHikVisionCamera\bin\Debug\AqDevice.dll

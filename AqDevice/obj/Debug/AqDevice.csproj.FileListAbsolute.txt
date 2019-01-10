@@ -5,3 +5,8 @@ E:\AQRose\Test\CameraManager\AqDevice\obj\Debug\AqDevice.pdb
 E:\AQRose\Test\CameraManager\Bin\AqDevice.dll
 E:\AQRose\Test\CameraManager\Bin\AqDevice.pdb
 E:\AQRose\Test\CameraManager\AqDevice\obj\Debug\AqDevice.csprojResolveAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\Bin\AqDevice.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\Bin\AqDevice.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\AqDevice\obj\Debug\AqDevice.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\AqDevice\obj\Debug\AqDevice.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\AqDevice\obj\Debug\AqDevice.pdb

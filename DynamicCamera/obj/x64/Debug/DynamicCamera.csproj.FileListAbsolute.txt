@@ -1,0 +1,11 @@
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DynamicCamera\bin\x64\Debug\DynamicCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DynamicCamera\bin\x64\Debug\DynamicCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DynamicCamera\bin\x64\Debug\AqDevice.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DynamicCamera\bin\x64\Debug\AqDevice.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DynamicCamera\obj\x64\Debug\DynamicCamera.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DynamicCamera\obj\x64\Debug\Camera_Dynamic.Properties.Resources.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DynamicCamera\obj\x64\Debug\DynamicCamera.csproj.GenerateResource.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DynamicCamera\obj\x64\Debug\DynamicCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DynamicCamera\obj\x64\Debug\DynamicCamera.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DynamicCamera\obj\x64\Debug\DynamicCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DynamicCamera\obj\x64\Debug\DynamicCamera.pdb

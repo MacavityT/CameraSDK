@@ -1,0 +1,12 @@
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\obj\x64\Debug\DaHengCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\bin\x64\Debug\DaHengCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\bin\x64\Debug\DaHengCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\bin\x64\Debug\AqDevice.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\bin\x64\Debug\GxIAPINET.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\bin\x64\Debug\AqDevice.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\obj\x64\Debug\DaHengCamera.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\obj\x64\Debug\DaHengCamera.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\obj\x64\Debug\DaHengCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\obj\x64\Debug\DaHengCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\Bin\DaHengCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\Bin\DaHengCamera.pdb

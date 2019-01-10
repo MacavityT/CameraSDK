@@ -65,7 +65,7 @@ namespace HikVision
 
             AqHikVisionCamera.AllBalserCamera = cameras;
             return true;
-          } //end function
+        } //end function
 
             
         public void Uninit()

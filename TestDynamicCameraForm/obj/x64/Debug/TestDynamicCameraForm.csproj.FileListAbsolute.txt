@@ -1,0 +1,13 @@
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\bin\x64\Debug\TestDynamicCameraForm.exe.config
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\bin\x64\Debug\TestDynamicCameraForm.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\bin\x64\Debug\TestDynamicCameraForm.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\bin\x64\Debug\AqDevice.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\bin\x64\Debug\AqDevice.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\obj\x64\Debug\TestDynamicCameraForm.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\obj\x64\Debug\TestDynamicCameraForm.Form1.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\obj\x64\Debug\TestDynamicCameraForm.Properties.Resources.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\obj\x64\Debug\TestDynamicCameraForm.csproj.GenerateResource.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\obj\x64\Debug\TestDynamicCameraForm.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\obj\x64\Debug\TestDynamicCameraForm.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\obj\x64\Debug\TestDynamicCameraForm.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestDynamicCameraForm\obj\x64\Debug\TestDynamicCameraForm.pdb

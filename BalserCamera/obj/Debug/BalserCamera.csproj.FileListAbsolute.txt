@@ -1,0 +1,14 @@
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\BalserCamera\bin\Debug\BalserCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\BalserCamera\bin\Debug\BalserCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\BalserCamera\bin\Debug\AqDevice.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\BalserCamera\bin\Debug\Basler.Pylon.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\BalserCamera\bin\Debug\AqDevice.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\BalserCamera\bin\Debug\Basler.Pylon.xml
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\BalserCamera\obj\Debug\Interop.BaslerGenICamSource.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\BalserCamera\obj\Debug\BalserCamera.csproj.ResolveComReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\BalserCamera\obj\Debug\BalserCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\BalserCamera\obj\Debug\BalserCamera.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\BalserCamera\obj\Debug\BalserCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\BalserCamera\obj\Debug\BalserCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\Bin\BalserCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\Bin\BalserCamera.pdb

@@ -1,0 +1,7 @@
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\Bin\HikVisionCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\Bin\HikVisionCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\HikVision\obj\x64\Debug\HikVision.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\HikVision\obj\x64\Debug\HikVision.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\HikVision\obj\x64\Debug\HikVision.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\HikVision\obj\x64\Debug\HikVisionCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\HikVision\obj\x64\Debug\HikVisionCamera.pdb

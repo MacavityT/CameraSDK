@@ -1,0 +1,15 @@
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\bin\x64\Debug\TestBaslerCamera.exe.config
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\bin\x64\Debug\TestBaslerCamera.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\bin\x64\Debug\TestBaslerCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\bin\x64\Debug\AqDevice.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\bin\x64\Debug\Basler.Pylon.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\bin\x64\Debug\AqDevice.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\bin\x64\Debug\Basler.Pylon.xml
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\obj\x64\Debug\TestBaslerCamera.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\obj\x64\Debug\TestBaslerCamera.Form1.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\obj\x64\Debug\TestBaslerCamera.Properties.Resources.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\obj\x64\Debug\TestBaslerCamera.csproj.GenerateResource.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\obj\x64\Debug\TestBaslerCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\obj\x64\Debug\TestBaslerCamera.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\obj\x64\Debug\TestBaslerCamera.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\TestBaslerCamera\obj\x64\Debug\TestBaslerCamera.pdb
