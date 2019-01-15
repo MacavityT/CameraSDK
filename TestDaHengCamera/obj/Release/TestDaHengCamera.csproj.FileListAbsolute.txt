@@ -23,3 +23,14 @@ E:\WorkingData\TechniqueData\相机SDK\CollectCamera\TestDaHengCamera\obj\Releas
 E:\WorkingData\TechniqueData\相机SDK\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.csproj.CopyComplete
 E:\WorkingData\TechniqueData\相机SDK\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.exe
 E:\WorkingData\TechniqueData\相机SDK\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\TestDaHengCamera.exe.config
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\TestDaHengCamera.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\TestDaHengCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.Form1.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.Properties.Resources.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.csproj.GenerateResource.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDaHengCamera\obj\Release\TestDaHengCamera.pdb

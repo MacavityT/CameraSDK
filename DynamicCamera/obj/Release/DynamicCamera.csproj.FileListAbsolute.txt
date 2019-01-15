@@ -16,3 +16,12 @@ E:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.csproj.Ge
 E:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.dll
 E:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.pdb
 E:\CollectCamera\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.csprojResolveAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\DynamicCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\DynamicCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DynamicCamera\obj\Release\Camera_Dynamic.Properties.Resources.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.csproj.GenerateResource.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DynamicCamera\obj\Release\DynamicCamera.pdb

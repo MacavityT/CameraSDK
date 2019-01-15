@@ -6,3 +6,14 @@ E:\CollectCamera\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCame
 E:\CollectCamera\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.csproj.GenerateResource.Cache
 E:\CollectCamera\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.exe
 E:\CollectCamera\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\TestHikVisionCamera.exe.config
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\TestHikVisionCamera.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\TestHikVisionCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.Form1.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.Properties.Resources.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.csproj.GenerateResource.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestHikVisionCamera\obj\Release\TestHikVisionCamera.pdb

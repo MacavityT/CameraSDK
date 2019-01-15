@@ -114,6 +114,16 @@ namespace AqDevice
             get;
             set;
         }
+		bool IsCameraOpened
+		{
+			get;
+			set;
+		}
+		bool IsStreamOpened
+		{
+			get;
+			set;
+		}
 
         void RegisterCaptureCallback(AqCaptureDelegate delCaptureFun);
 

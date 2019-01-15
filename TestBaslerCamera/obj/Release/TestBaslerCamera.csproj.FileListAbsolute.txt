@@ -22,3 +22,14 @@ E:\CollectCamera\CollectCamera\bin\Release\TestBaslerCamera.pdb
 E:\CollectCamera\CollectCamera\TestBaslerCamera\obj\Release\TestBaslerCamera.exe
 E:\CollectCamera\CollectCamera\TestBaslerCamera\obj\Release\TestBaslerCamera.pdb
 E:\CollectCamera\CollectCamera\TestBaslerCamera\obj\Release\TestBaslerCamera.csprojResolveAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\TestBaslerCamera.exe.config
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\TestBaslerCamera.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\TestBaslerCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestBaslerCamera\obj\Release\TestBaslerCamera.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestBaslerCamera\obj\Release\TestBaslerCamera.Form1.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestBaslerCamera\obj\Release\TestBaslerCamera.Properties.Resources.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestBaslerCamera\obj\Release\TestBaslerCamera.csproj.GenerateResource.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestBaslerCamera\obj\Release\TestBaslerCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestBaslerCamera\obj\Release\TestBaslerCamera.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestBaslerCamera\obj\Release\TestBaslerCamera.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestBaslerCamera\obj\Release\TestBaslerCamera.pdb

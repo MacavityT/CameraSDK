@@ -14,3 +14,10 @@ E:\CollectCamera\CollectCamera\bin\Release\DaHengCamera.pdb
 E:\CollectCamera\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.dll
 E:\CollectCamera\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.pdb
 E:\CollectCamera\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.csprojResolveAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\DaHengCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\DaHengCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.pdb

@@ -159,8 +159,18 @@ namespace BalserCamera
             get { return triggerswitchs; }
             set { triggerswitchs = value; }
         }
-     
-        public int OpenCamera()
+		public bool IsCameraOpened
+		{
+			get;
+			set;
+		} = false;
+		public bool IsStreamOpened
+		{
+			get;
+			set;
+		} = false;
+
+		public int OpenCamera()
         {
             List<ICameraInfo> allCameras = CameraFinder.Enumerate();
             foreach (ICameraInfo tempinfo in allCameras)

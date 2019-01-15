@@ -56,13 +56,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Bin\AqDevice.dll</HintPath>
     </Reference>
-    <Reference Include="BalserCamera, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Bin\BalserCamera.dll</HintPath>
-    </Reference>
     <Reference Include="Basler.Pylon, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e389355f398382ab, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Bin\Basler.Pylon.dll</HintPath>
+    </Reference>
+    <Reference Include="BaslerCamera, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\bin\Release\BaslerCamera.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

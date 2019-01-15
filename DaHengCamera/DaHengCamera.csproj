@@ -48,9 +48,8 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GxIAPINET, Version=1.0.6590.26805, Culture=neutral, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Bin\GxIAPINET.dll</HintPath>
+    <Reference Include="GxIAPINET">
+      <HintPath>bin\x64\Debug\GxIAPINET.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

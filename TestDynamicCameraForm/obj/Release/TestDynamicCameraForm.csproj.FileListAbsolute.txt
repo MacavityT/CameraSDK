@@ -21,3 +21,14 @@ E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCame
 E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.exe
 E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.pdb
 E:\CollectCamera\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.csprojResolveAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\TestDynamicCameraForm.exe.config
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\TestDynamicCameraForm.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\TestDynamicCameraForm.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.Form1.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.Properties.Resources.resources
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.csproj.GenerateResource.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.csproj.CopyComplete
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.exe
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\TestDynamicCameraForm\obj\Release\TestDynamicCameraForm.pdb

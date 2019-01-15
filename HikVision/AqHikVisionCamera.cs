@@ -156,8 +156,18 @@ namespace HikVision
             get { return triggerswitchs; }
             set { triggerswitchs = value; }
         }
+		public bool IsCameraOpened
+		{
+			get;
+			set;
+		} = false;
+		public bool IsStreamOpened
+		{
+			get;
+			set;
+		} = false;
 
-        public int OpenCamera()
+		public int OpenCamera()
         {           
             getonecamera = new MyCamera();
             MyCamera.MV_CC_DEVICE_INFO_LIST stDevList = new MyCamera.MV_CC_DEVICE_INFO_LIST();

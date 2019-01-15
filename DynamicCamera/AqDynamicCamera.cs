@@ -149,8 +149,18 @@ namespace Camera_Dynamic
             get { return triggeredges; }
             set { triggeredges = value; }
         }
+		public bool IsCameraOpened
+		{
+			get;
+			set;
+		} = false;
+		public bool IsStreamOpened
+		{
+			get;
+			set;
+		} = false;
 
-        public int OpenCamera()
+		public int OpenCamera()
         {
             frameimagepath = new List<string>();           
             frameimage = new List<Image>();

@@ -159,8 +159,18 @@ namespace DaHengCamera
             get { return triggerswitchs; }
             set { triggerswitchs = value; }
         }
+		public bool IsCameraOpened
+		{
+			get;
+			set;
+		} = false;
+		public bool IsStreamOpened
+		{
+			get;
+			set;
+		} = false;
 
-        public void RegisterCaptureCallback(AqCaptureDelegate delCaptureFun)
+		public void RegisterCaptureCallback(AqCaptureDelegate delCaptureFun)
         {
             eventCapture += delCaptureFun;
         }

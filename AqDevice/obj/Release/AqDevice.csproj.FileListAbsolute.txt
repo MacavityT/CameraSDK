@@ -10,3 +10,9 @@ E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\AqDevice\obj\Re
 E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\AqDevice\obj\Release\AqDevice.csproj.CoreCompileInputs.cache
 E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\AqDevice\obj\Release\AqDevice.dll
 E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\AqDevice\obj\Release\AqDevice.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\AqDevice.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\AqDevice.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\AqDevice\obj\Release\AqDevice.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\AqDevice\obj\Release\AqDevice.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\AqDevice\obj\Release\AqDevice.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\AqDevice\obj\Release\AqDevice.csprojAssemblyReference.cache
