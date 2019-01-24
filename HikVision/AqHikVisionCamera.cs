@@ -39,8 +39,9 @@ namespace HikVision
 
         //set window event
         private event AqDevice.AqCaptureDelegate eventCapture;
-        //set get image event
-        public static List<IAqCamera> allbaslercamera = null;
+		private event AqDevice.AqOffLineDelegate eventOffLine;
+		//set get image event
+		public static List<IAqCamera> allbaslercamera = null;
         public  MyCamera  getonecamera;
         private int nRet = MyCamera.MV_OK;
         public static MyCamera.cbOutputExdelegate ImageCallback;
@@ -221,8 +222,18 @@ namespace HikVision
                             Console.WriteLine("Open device failed:{0:x8}", nRet);
                             return 0;
                         }
-                        // ch:探测网络最佳包大小(只对GigE相机有效) | en:Detection network optimal package size(It only works for the GigE camera)
-                        if (stDevInfo.nTLayerType == MyCamera.MV_GIGE_DEVICE)
+						//注册掉线事件
+						MyCamera.cbExceptiondelegate ExCallback;
+						ExCallback = new MyCamera.cbExceptiondelegate(CallOffLineFunction);
+
+						nRet = getonecamera.MV_CC_RegisterExceptionCallBack_NET(ExCallback, IntPtr.Zero);
+						if (MyCamera.MV_OK != nRet)
+						{
+							Console.WriteLine("Register Exception CallBack failed{0:x8}", nRet);
+							return 0;
+						}
+						// ch:探测网络最佳包大小(只对GigE相机有效) | en:Detection network optimal package size(It only works for the GigE camera)
+						if (stDevInfo.nTLayerType == MyCamera.MV_GIGE_DEVICE)
                         {
                             int nPacketSize = getonecamera.MV_CC_GetOptimalPacketSize_NET();
                             if (nPacketSize > 0)
@@ -313,7 +324,17 @@ namespace HikVision
             eventCapture(obj, bmp);
         }
 
-        public void TriggerSoftware()
+		public void RegisterOffLineCallback(AqOffLineDelegate delOffLine)
+		{
+			eventOffLine += delOffLine;
+		}
+
+		public void CallOffLineFunction(UInt32 nMsgType, IntPtr pUser)
+		{
+			eventOffLine(nMsgType);
+		}
+
+		public void TriggerSoftware()
         {
             if(TriggerMode == TriggerModes.Unknow)
                 nRet = getonecamera.MV_CC_SetCommandValue_NET("TriggerSoftware");

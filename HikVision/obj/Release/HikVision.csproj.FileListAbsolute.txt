@@ -10,3 +10,10 @@ E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\HikVision\obj\Release\Hik
 E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\HikVision\obj\Release\HikVision.csproj.CopyComplete
 E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\HikVision\obj\Release\HikVisionCamera.dll
 E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\HikVision\obj\Release\HikVisionCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\HikVision\obj\Release\HikVision.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\HikVision\obj\Release\HikVision.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\HikVision\obj\Release\HikVisionCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\HikVision\obj\Release\HikVisionCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\bin\HikVisionCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\bin\HikVisionCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\HikVision\obj\Release\HikVision.csproj.CopyComplete

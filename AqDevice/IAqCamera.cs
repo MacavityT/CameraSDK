@@ -127,6 +127,8 @@ namespace AqDevice
 
         void RegisterCaptureCallback(AqCaptureDelegate delCaptureFun);
 
+		void RegisterOffLineCallback(AqOffLineDelegate delOffLine);
+
         void TriggerSoftware();
 
     }

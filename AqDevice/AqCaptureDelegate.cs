@@ -7,4 +7,5 @@ using System.Drawing;
 namespace AqDevice
 {
     public delegate void AqCaptureDelegate(object objUserParam, Bitmap bitmap);
+	public delegate void AqOffLineDelegate(object obj);
 }

@@ -21,3 +21,10 @@ E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DaHengCamera\obj\Release\
 E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.csproj.CopyComplete
 E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.dll
 E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\DaHengCamera\obj\Release\DaHengCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\DaHengCamera\obj\Release\DaHengCamera.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\DaHengCamera\obj\Release\DaHengCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\DaHengCamera\obj\Release\DaHengCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\DaHengCamera\obj\Release\DaHengCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\bin\DaHengCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\bin\DaHengCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\DaHengCamera\obj\Release\DaHengCamera.csproj.CopyComplete

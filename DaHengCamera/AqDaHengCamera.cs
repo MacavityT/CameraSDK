@@ -40,12 +40,14 @@ namespace DaHengCamera
 
         //set window event
         private event AqDevice.AqCaptureDelegate eventCapture;
-        //set get image event
-        public static List<IAqCamera> allDaHengcamera = null;
+		private event AqDevice.AqOffLineDelegate eventOffLine;
+		//set get image event
+		public static List<IAqCamera> allDaHengcamera = null;
 
         IGXStream m_objIGXStream = null;
         IGXDevice m_objIGXDevice = null;                    ///<设备对像
         IGXFeatureControl m_objIGXFeatureControl = null;    ///<远端设备属性控制器对像
+		GX_DEVICE_OFFLINE_CALLBACK_HANDLE m_DeviceOffLine = null; //设备掉线事件
         static IGXFactory m_objIGXFactory = null;
         private bool m_bIsSnap = false;
 
@@ -180,7 +182,17 @@ namespace DaHengCamera
             eventCapture(obj, bmp);
         }
 
-        static public GxIAPINET.IGXFactory ObjIGXFactory
+		public void RegisterOffLineCallback(AqOffLineDelegate delOffLine)
+		{
+			eventOffLine += delOffLine;
+		}
+
+		public void CallOffLineFunction(object obj)
+		{
+			eventOffLine(obj);
+		}
+
+		static public GxIAPINET.IGXFactory ObjIGXFactory
         {
             get { return m_objIGXFactory; }
             set { m_objIGXFactory = value; }
@@ -214,7 +226,8 @@ namespace DaHengCamera
                 {
                     m_objIGXDevice = ObjIGXFactory.OpenDeviceByUserID(this.Name, GX_ACCESS_MODE.GX_ACCESS_EXCLUSIVE);
                     m_objIGXFeatureControl = m_objIGXDevice.GetRemoteFeatureControl();
-                }
+					m_DeviceOffLine = m_objIGXDevice.RegisterDeviceOfflineCallback(null, CallOffLineFunction);
+				}
                
             }
                            
@@ -246,6 +259,8 @@ namespace DaHengCamera
             //关闭设备
             if (null != m_objIGXDevice)
             {
+				//注销掉线回调函数
+				m_objIGXDevice.UnregisterDeviceOfflineCallback(m_DeviceOffLine);
                 m_objIGXDevice.Close();
                 m_objIGXDevice = null;
             }
@@ -323,7 +338,7 @@ namespace DaHengCamera
             //打开流
             if (null != m_objIGXDevice)
             {
-                m_objIGXStream = m_objIGXDevice.OpenStream(0);
+				m_objIGXStream = m_objIGXDevice.OpenStream(0);
             }
 
             //开启采集流通道
@@ -333,7 +348,7 @@ namespace DaHengCamera
                 //类型)，若用户想用这个参数可以在委托函数中进行使用
                 m_objIGXStream.RegisterCaptureCallback(null, __OnFrameCallbackFun);
                 m_objIGXStream.StartGrab();
-            }
+			}
 
             //发送开采命令
             if (null != m_objIGXFeatureControl)
@@ -352,7 +367,6 @@ namespace DaHengCamera
             {
                 m_objIGXFeatureControl.GetCommandFeature("AcquisitionStop").Execute();
                 m_bIsSnap = true;
-                m_objIGXFeatureControl = null;
                 return 1;
             }
             else 
@@ -485,8 +499,6 @@ namespace DaHengCamera
             Marshal.Copy(p_byteSrc, 0, decBmpData.Scan0, buffsize);
             dec.UnlockBits(decBmpData);
             CallFunction(this.Name, dec);
-
-
         }
 
 

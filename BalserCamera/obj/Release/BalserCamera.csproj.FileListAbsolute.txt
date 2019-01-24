@@ -21,3 +21,12 @@ E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\bin\Release\BaslerCamera.
 E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\BalserCamera\obj\Release\BalserCamera.csproj.CopyComplete
 E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\BalserCamera\obj\Release\BaslerCamera.dll
 E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\BalserCamera\obj\Release\BaslerCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\BalserCamera\obj\Release\BalserCamera.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\BalserCamera\obj\Release\Interop.BaslerGenICamSource.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\BalserCamera\obj\Release\BalserCamera.csproj.ResolveComReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\BalserCamera\obj\Release\BalserCamera.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\BalserCamera\obj\Release\BaslerCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\BalserCamera\obj\Release\BaslerCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\bin\BaslerCamera.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\bin\BaslerCamera.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\BalserCamera\obj\Release\BalserCamera.csproj.CopyComplete

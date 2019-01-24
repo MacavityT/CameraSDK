@@ -16,3 +16,8 @@ E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\AqDevice\obj\Release\AqDe
 E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\AqDevice\obj\Release\AqDevice.dll
 E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\AqDevice\obj\Release\AqDevice.pdb
 E:\WorkingData\ProjectData\AQRose2DFrame\CollectCamera\AqDevice\obj\Release\AqDevice.csprojAssemblyReference.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\bin\AqDevice.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\bin\AqDevice.pdb
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\AqDevice\obj\Release\AqDevice.csproj.CoreCompileInputs.cache
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\AqDevice\obj\Release\AqDevice.dll
+E:\WorkingData\ProjectData\AQRose2DFrame\CameraSDK\AqDevice\obj\Release\AqDevice.pdb

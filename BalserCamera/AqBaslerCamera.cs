@@ -42,6 +42,7 @@ namespace BalserCamera
 
         //set window event
         private event AqDevice.AqCaptureDelegate eventCapture;
+		private event AqDevice.AqOffLineDelegate eventOffLine;
         //set get image event
         public static List<IAqCamera> allbaslercamera = null;
         public Camera getonecamera;
@@ -178,10 +179,11 @@ namespace BalserCamera
                 if (tempinfo[CameraInfoKey.UserDefinedName] == name)
                 {
                     getonecamera = new Camera(tempinfo);
-                    if (getonecamera.IsOpen)
-                        return 0;
+					getonecamera.ConnectionLost += CallOffLineFunction;//注册掉线事件
+					if (getonecamera.IsOpen)
+						return 0;
 
-                    TriggerConfiguration();
+					TriggerConfiguration();
                     getonecamera.Open();
                     SetExposureTime();
                     SetImageROI();
@@ -287,7 +289,17 @@ namespace BalserCamera
             eventCapture(obj,bmp);
         }
 
-        public void TriggerSoftware()
+		public void RegisterOffLineCallback(AqOffLineDelegate delOffLine)
+		{
+			eventOffLine += delOffLine;
+		}
+
+		public void CallOffLineFunction(object obj, EventArgs eventArgs)
+		{
+			eventOffLine(obj);
+		}
+
+		public void TriggerSoftware()
         {
 
             bool isWaitingFrameStart = getonecamera.Parameters[PLCamera.AcquisitionStatus].GetValue();
