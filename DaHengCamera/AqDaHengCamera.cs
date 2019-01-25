@@ -270,8 +270,7 @@ namespace DaHengCamera
 
         public void SetImageROI()
         {
-            
-
+           
         }
 
         private void TriggerConfiguration()

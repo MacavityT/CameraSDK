@@ -279,7 +279,7 @@ namespace BalserCamera
             return 0;
         }
 
-        public void RegisterCaptureCallback(AqCaptureDelegate delCaptureFun)
+		public void RegisterCaptureCallback(AqCaptureDelegate delCaptureFun)
         {
             eventCapture += delCaptureFun;
         }

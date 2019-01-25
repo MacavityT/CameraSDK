@@ -20,7 +20,7 @@ namespace BalserCamera
             {
                 AqBaslerCamera camera = new AqBaslerCamera();
                 camera.Name = camerainfo[CameraInfoKey.UserDefinedName];
-				camera.Id = camerainfo[CameraInfoKey.DeviceID];
+				//camera.Id = camerainfo[CameraInfoKey.DeviceID];//ID无法获取,加入此代码则异常
 				camera.Mac = camerainfo[CameraInfoKey.DeviceMacAddress];
                 camera.Ip = camerainfo[CameraInfoKey.DeviceIpAddress];
                 cameras.Add(camera);            
