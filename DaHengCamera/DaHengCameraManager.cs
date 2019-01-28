@@ -15,6 +15,8 @@ namespace DaHengCamera
 
         public bool Init()
         {
+			cameras.Clear();
+
             m_objIGXFactory = IGXFactory.GetInstance();
             m_objIGXFactory.Init();
 

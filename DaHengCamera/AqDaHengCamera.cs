@@ -382,11 +382,18 @@ namespace DaHengCamera
 
         public  void TriggerSoftware()
         {
-            //发送软触发命令
-            if (null != m_objIGXFeatureControl)
-            {
-                m_objIGXFeatureControl.GetCommandFeature("TriggerSoftware").Execute();
-            }
+			try
+			{
+				//发送软触发命令
+				if (null != m_objIGXFeatureControl)
+				{
+					m_objIGXFeatureControl.GetCommandFeature("TriggerSoftware").Execute();
+				}
+			}
+			catch(CGalaxyException ex)
+			{
+				throw (ex.InnerException);
+			}
         }
 
         /// <summary>
@@ -480,25 +487,32 @@ namespace DaHengCamera
             //GC.Collect();
 
 
-            Bitmap dec = new Bitmap((int)objIFrameData.GetWidth(), (int)objIFrameData.GetHeight(), PixelFormat.Format8bppIndexed);
-            ColorPalette palette = dec.Palette;
-            for (int i = 0; i < 256; i++)
-            {
-                palette.Entries[i] = Color.FromArgb(i, i, i);
-            }
-            dec.Palette = palette;
-            Rectangle rect = new Rectangle(0, 0, dec.Width, dec.Height);
-            BitmapData decBmpData = dec.LockBits(rect, ImageLockMode.ReadWrite, dec.PixelFormat);
+			try
+			{
+				Bitmap dec = new Bitmap((int)objIFrameData.GetWidth(), (int)objIFrameData.GetHeight(), PixelFormat.Format8bppIndexed);
+				ColorPalette palette = dec.Palette;
+				for (int i = 0; i < 256; i++)
+				{
+					palette.Entries[i] = Color.FromArgb(i, i, i);
+				}
+				dec.Palette = palette;
+				Rectangle rect = new Rectangle(0, 0, dec.Width, dec.Height);
+				BitmapData decBmpData = dec.LockBits(rect, ImageLockMode.ReadWrite, dec.PixelFormat);
 
-            IntPtr ptrSrc = objIFrameData.ConvertToRaw8(GX_VALID_BIT_LIST.GX_BIT_0_7);
-            byte[] p_byteSrc = new byte[objIFrameData.GetPayloadSize()];
-            int stride = (int)objIFrameData.GetWidth();
-            int buffsize = stride * (int)objIFrameData.GetHeight();
-            Marshal.Copy(ptrSrc, p_byteSrc, 0, buffsize);
-            Marshal.Copy(p_byteSrc, 0, decBmpData.Scan0, buffsize);
-            dec.UnlockBits(decBmpData);
-            CallFunction(this.Name, dec);
-        }
+				IntPtr ptrSrc = objIFrameData.ConvertToRaw8(GX_VALID_BIT_LIST.GX_BIT_0_7);
+				byte[] p_byteSrc = new byte[objIFrameData.GetPayloadSize()];
+				int stride = (int)objIFrameData.GetWidth();
+				int buffsize = stride * (int)objIFrameData.GetHeight();
+				Marshal.Copy(ptrSrc, p_byteSrc, 0, buffsize);
+				Marshal.Copy(p_byteSrc, 0, decBmpData.Scan0, buffsize);
+				dec.UnlockBits(decBmpData);
+				CallFunction(this.Name, dec);
+			}
+			catch (CGalaxyException ex)
+			{
+				throw (ex.InnerException);
+			}
+		}
 
 
     }

@@ -15,6 +15,8 @@ namespace HikVision
 
         public bool Init()
         {
+			cameras.Clear();
+
             int nRet = MyCamera.MV_OK;
             MyCamera device = new MyCamera();
             MyCamera.MV_CC_DEVICE_INFO_LIST stDevList = new MyCamera.MV_CC_DEVICE_INFO_LIST();
@@ -63,8 +65,7 @@ namespace HikVision
             if (cameras.Count == 0)
                 return false;
 
-            AqHikVisionCamera.AllBalserCamera = cameras;
-            return true;
+			return true;
         } //end function
 
             

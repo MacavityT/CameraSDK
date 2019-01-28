@@ -44,17 +44,10 @@ namespace BalserCamera
         private event AqDevice.AqCaptureDelegate eventCapture;
 		private event AqDevice.AqOffLineDelegate eventOffLine;
         //set get image event
-        public static List<IAqCamera> allbaslercamera = null;
         public Camera getonecamera;
         private Stopwatch stopWatch = new Stopwatch();
         private PixelDataConverter converter = new PixelDataConverter();
      //   private Bitmap bitmap;
-
-        public static List<IAqCamera> AllBalserCamera
-        {
-            get { return allbaslercamera; }
-            set { allbaslercamera = value; }
-        }
 
         public string Id
         {

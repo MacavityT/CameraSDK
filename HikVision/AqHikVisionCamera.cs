@@ -41,17 +41,9 @@ namespace HikVision
         private event AqDevice.AqCaptureDelegate eventCapture;
 		private event AqDevice.AqOffLineDelegate eventOffLine;
 		//set get image event
-		public static List<IAqCamera> allbaslercamera = null;
         public  MyCamera  getonecamera;
         private int nRet = MyCamera.MV_OK;
         public static MyCamera.cbOutputExdelegate ImageCallback;
-
-
-        public static List<IAqCamera> AllBalserCamera
-        {
-            get { return allbaslercamera; }
-            set { allbaslercamera = value; }
-        }
 
         public string Id
         {

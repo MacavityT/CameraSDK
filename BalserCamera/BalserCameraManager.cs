@@ -14,6 +14,8 @@ namespace BalserCamera
        
         public bool Init()
         {
+			cameras.Clear();
+
             List<ICameraInfo> allCameras =  CameraFinder.Enumerate();
 
             foreach (ICameraInfo camerainfo in allCameras)
@@ -28,8 +30,6 @@ namespace BalserCamera
 
             if (cameras.Count == 0)
                 return false;
-
-            AqBaslerCamera.allbaslercamera = cameras;
 
             return true;
         }
