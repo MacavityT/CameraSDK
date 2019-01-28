@@ -1,7 +1,0 @@
-E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\obj\Debug\DaHengCamera.csprojAssemblyReference.cache
-E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\obj\Debug\DaHengCamera.csproj.CoreCompileInputs.cache
-E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\Bin\DaHengCamera.dll
-E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\Bin\DaHengCamera.pdb
-E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\obj\Debug\DaHengCamera.csproj.CopyComplete
-E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\obj\Debug\DaHengCamera.dll
-E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\DaHengCamera\obj\Debug\DaHengCamera.pdb

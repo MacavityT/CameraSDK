@@ -1,5 +1,0 @@
-E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\Bin\AqDevice.dll
-E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\Bin\AqDevice.pdb
-E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\AqDevice\obj\x64\Debug\AqDevice.csproj.CoreCompileInputs.cache
-E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\AqDevice\obj\x64\Debug\AqDevice.dll
-E:\WorkingData\ProjectData\AQRose2DFrame\相机SDK\CollectCamera\AqDevice\obj\x64\Debug\AqDevice.pdb

@@ -261,7 +261,7 @@ namespace DaHengCamera
             {
 				//注销掉线回调函数
 				m_objIGXDevice.UnregisterDeviceOfflineCallback(m_DeviceOffLine);
-                m_objIGXDevice.Close();
+				m_objIGXDevice.Close();
                 m_objIGXDevice = null;
             }
 
